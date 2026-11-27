@@ -94,3 +94,35 @@ Actual input schemas will be inspected and reconciled across monthly files durin
 ### Gasoline Input Schema
 
 The types below reflect the pandas representation reported in HW1. During Spark ingestion, `Date` will be parsed and cast to a date for joining, and price columns will be cast to numeric types.
+
+| Column Name                    | Data Type         |
+|--------------------------------|-------------------|
+| Date                           | Date (MM/DD/YYYY) |
+| New York State Average ($/gal) | double  |
+| Albany Average ($/gal)         | double  |
+| Batavia Average ($/gal)        | double  |
+| Binghamton Average ($/gal)     | double  |
+| Buffalo Average ($/gal)        | double  |
+| Dutchess Average ($/gal)       | double  |
+| Elmira Average ($/gal)         | double  |
+| Glens Falls Average ($/gal)    | double  |
+| Ithaca Average ($/gal)         | double  |
+| Kingston Average ($/gal)       | double  |
+| Nassau Average ($/gal)         | double  |
+| New York City Average ($/gal)  | double  |
+| Rochester Average ($/gal)      | double  |
+| Syracuse Average ($/gal)       | double  |
+| Utica Average ($/gal)          | double  |
+| Watertown Average ($/gal)      | double  |
+| White Plains Average ($/gal)   | double  |
+
+## Repository Structure
+
+```
+gas_price_and_taxi_trips/
+├── README.md
+└── import_gas_taxi.ipynb
+
+1. `01_import_gas_taxi.ipynb`:  Loads the NYC Yellow Taxi trip records and the weekly NY gasoline price CSV from Google Cloud Storage into Spark and inspects their schemas. |
+
+```
